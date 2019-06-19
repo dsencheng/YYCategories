@@ -358,14 +358,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isNotBlank;
 
 /**
- Returns YES if the target string is contained within the receiver.
- @param string A string to test the the receiver.
- 
- @discussion Apple has implemented this method in iOS8.
- */
-- (BOOL)containsString:(NSString *)string;
-
-/**
  Returns YES if the target CharacterSet is contained within the receiver.
  @param set  A character set to test the the receiver.
  */

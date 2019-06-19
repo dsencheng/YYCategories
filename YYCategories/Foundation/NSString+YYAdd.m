@@ -375,11 +375,6 @@ YYSYNTH_DUMMY_CLASS(NSString_YYAdd)
     return NO;
 }
 
-- (BOOL)containsString:(NSString *)string {
-    if (string == nil) return NO;
-    return [self rangeOfString:string].location != NSNotFound;
-}
-
 - (BOOL)containsCharacterSet:(NSCharacterSet *)set {
     if (set == nil) return NO;
     return [self rangeOfCharacterFromSet:set].location != NSNotFound;
