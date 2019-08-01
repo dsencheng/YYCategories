@@ -274,8 +274,9 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
         UIView *sub = self.subviews[count];
         if ([sub isKindOfClass:clz]) {
             return sub;
+        } else {
+           return [sub findFirstTopSubView:clz];
         }
-        [sub findFirstTopSubView:clz];
     }
     return nil;
 }
