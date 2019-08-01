@@ -100,7 +100,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGRect)convertRect:(CGRect)rect fromViewOrWindow:(nullable UIView *)view;
 
-
 @property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
 @property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
 @property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
@@ -111,6 +110,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) CGFloat centerY;     ///< Shortcut for center.y
 @property (nonatomic) CGPoint origin;      ///< Shortcut for frame.origin.
 @property (nonatomic) CGSize  size;        ///< Shortcut for frame.size.
+
+/*
+ 从顶层视图开始查找，找到的第一个子视图。
+ */
+- (UIView*)findFirstTopSubView:(Class)clz;
 
 @end
 

@@ -269,4 +269,14 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
     self.frame = frame;
 }
 
+- (UIView *)findFirstTopSubView:(Class)clz {
+    for (int count = self.subviews.count - 1; count >= 0; count--) {
+        UIView *sub = self.subviews[count];
+        if ([sub isKindOfClass:clz]) {
+            return sub;
+        }
+        [sub findFirstTopSubView:clz];
+    }
+}
+
 @end
