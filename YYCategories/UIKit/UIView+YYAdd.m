@@ -270,13 +270,14 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
 }
 
 - (UIView *)findFirstTopSubView:(Class)clz {
-    for (int count = self.subviews.count - 1; count >= 0; count--) {
+    for (NSInteger count = self.subviews.count - 1; count >= 0; count--) {
         UIView *sub = self.subviews[count];
         if ([sub isKindOfClass:clz]) {
             return sub;
         }
         [sub findFirstTopSubView:clz];
     }
+    return nil;
 }
 
 @end
